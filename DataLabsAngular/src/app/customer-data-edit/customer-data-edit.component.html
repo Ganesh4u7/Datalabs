@@ -1,0 +1,64 @@
+
+
+<div class="container">
+
+  <div class="text-center">
+    <h1 > Customer Data Form</h1>
+  </div>
+  <div class="col-sm-4 form-group">
+    <button class="btn btn-success"  (click)=customersPage()>Customers Details</button>
+  </div>
+<form #f="ngForm">
+  <div class="bs-linebreak"></div>
+
+    <div class="col-sm-4 form-group">
+      <label for="name">Customer Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        name="name"
+        ngModel
+        required
+      >
+    </div>
+    <div class="col-sm-4 form-group">
+      <label for="phoneno">Phone No:</label>
+      <input
+        type="number"
+        id="phoneno"
+        class="form-control"
+        name="phoneno"
+        ngModel
+        required
+      >
+    </div>
+    <div class="col-sm-4 form-group">
+      <label for="address">Address:</label>
+      <input
+        type="text"
+        id="address"
+        class="form-control"
+        name="address"
+        ngModel
+        required
+      >
+    </div>
+    <div class="col-sm-4 form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        name="email"
+        ngModel
+        required
+      >
+    </div>
+  <div class="col-sm-4 form-group">
+    <button class="btn btn-success"  (click)=onSubmit(f) [disabled]="!f.valid">{{editMode ? "Save Details":"Create"}}</button>
+  </div>
+</form>
+
+
+</div>

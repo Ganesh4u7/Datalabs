@@ -1,0 +1,41 @@
+<div class = "container">
+    <div class="text-center">
+       <h1 > Customer Details</h1>
+    </div>
+  <div class="row">
+
+  </div>
+  <div class="container">
+    <button class="btn btn-success"  (click)="create()">Create</button>
+  </div>
+
+    <div class="container" *ngFor=" let customer of customers;let i = index;">
+
+      <tr>
+        <td>Customer Name:</td>
+
+        <td> {{customer.name}}</td>
+      </tr>
+
+
+      <tr>
+        <td> PhoneNo:</td>
+
+        <td> {{customer.phoneno}}</td>
+      </tr>
+      <tr>
+        <td>Address :</td>
+        <td> {{customer.address}}</td>
+      </tr>
+      <tr>
+        <td>Email :</td>
+        <td> {{customer.email}}</td>
+      </tr>
+      <div>
+        <button class=" btn-primary" (click)="edit(i)">Edit</button>
+        <button class=" btn-danger" (click)="delete(i)">Delete</button>
+      </div>
+
+    </div>
+
+</div>
